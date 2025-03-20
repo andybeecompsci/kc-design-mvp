@@ -8,17 +8,17 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 border-b bg-white">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-2">
+        <div className="container flex flex-col items-center py-6">
+          <Link href="/" className="mb-4 flex items-center gap-1">
             <img
               src="/kc-logo.png"
               alt="KC Design Co Logo"
               className="h-8 w-auto"
             />
-            <h1 className="text-xl font-bold tracking-tight">KC DESIGN CO</h1>
+            <h1 className="text-xl font-bold">DESIGN CO</h1>
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+          <nav className="flex items-center gap-16">
+            <Link href="/" className="text-sm font-medium text-primary">
               Home
             </Link>
             <Link href="/shop" className="text-sm font-medium transition-colors hover:text-primary">
@@ -31,12 +31,6 @@ export default function Home() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" size="icon" className="rounded-full">
-              <ShoppingBag className="h-4 w-4" />
-              <span className="sr-only">Shopping cart</span>
-            </Button>
-          </div>
         </div>
       </header>
       <main className="flex-1">
