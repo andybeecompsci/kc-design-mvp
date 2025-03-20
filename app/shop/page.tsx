@@ -8,44 +8,35 @@ import Header from "@/components/header"
 const products = [
   {
     id: 1,
-    title: "Custom T-Shirt",
-    price: 24.99,
-    category: "Apparel"
+    title: "Product 1",
+    price: 24.99
   },
   {
     id: 2,
-    title: "Handmade Mug",
-    price: 18.99,
-    category: "Home Decor"
+    title: "Product 2",
+    price: 18.99
   },
   {
     id: 3,
-    title: "Personalized Sign",
-    price: 34.99,
-    category: "Home Decor"
+    title: "Product 3",
+    price: 34.99
   },
   {
     id: 4,
-    title: "Custom Hoodie",
-    price: 39.99,
-    category: "Apparel"
+    title: "Product 4",
+    price: 39.99
   },
   {
     id: 5,
-    title: "Decorative Pillow",
-    price: 29.99,
-    category: "Home Decor"
+    title: "Product 5",
+    price: 29.99
   },
   {
     id: 6,
-    title: "Custom Phone Case",
-    price: 19.99,
-    category: "Accessories"
+    title: "Product 6",
+    price: 19.99
   }
 ]
-
-// # available categories for filtering
-const categories = ["All", "Apparel", "Home Decor", "Accessories"]
 
 export default function ShopPage() {
   return (
@@ -67,21 +58,6 @@ export default function ShopPage() {
         {/* # shop content section */}
         <section className="w-full py-12 md:py-16">
           <div className="container px-4 md:px-6">
-            {/* # filtering options */}
-            <div className="mb-8">
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <Button
-                    key={category}
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-text-white"
-                  >
-                    {category}
-                  </Button>
-                ))}
-              </div>
-            </div>
-
             {/* # products grid */}
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {products.map((product) => (
@@ -91,13 +67,6 @@ export default function ShopPage() {
                   price={product.price}
                 />
               ))}
-            </div>
-
-            {/* # load more button */}
-            <div className="mt-12 text-center">
-              <Button className="bg-primary hover:bg-primary/90 text-text-white">
-                Load More Products
-              </Button>
             </div>
           </div>
         </section>

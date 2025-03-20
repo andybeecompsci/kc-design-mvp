@@ -32,21 +32,11 @@ export default function ContactPage() {
         </section>
 
         {/* # additional contact info */}
-        <section className="w-full py-12 md:py-24 bg-primary text-text-white">
+        <section className="w-full py-12 md:py-24 bg-primary">
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold">Visit Our Store</h2>
-                <p>123 Design Street</p>
-                <p>Creative District</p>
-                <p>Artville, ST 12345</p>
-              </div>
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold">Business Hours</h2>
-                <p>Monday - Friday: 9am - 6pm</p>
-                <p>Saturday: 10am - 4pm</p>
-                <p>Sunday: Closed</p>
-              </div>
+              <div></div>
+              <div></div>
             </div>
           </div>
         </section>

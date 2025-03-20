@@ -21,10 +21,12 @@ export default function Home() {
                   If you have an idea or want something specific and you are not quite sure how to come about it or can't find something that works, you have come to the right place!
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-primary hover:bg-primary/90 text-text-white">Get Started</Button>
-                  <Button variant="outline" className="border-primary text-primary">
-                    View Our Work
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="bg-primary hover:bg-primary/90 text-text-white">Get Started</Button>
+                  </Link>
+                  <Link href="/shop">
+                    <Button variant="outline" className="border-primary text-primary">View Our Work</Button>
+                  </Link>
                 </div>
               </div>
               <div className="mx-auto aspect-video overflow-hidden rounded-xl">
@@ -52,12 +54,14 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <ProductCard title="Custom T-Shirt" price={24.99} />
-              <ProductCard title="Handmade Mug" price={18.99} />
-              <ProductCard title="Personalized Sign" price={34.99} />
+              <ProductCard title="Product 1" price={24.99} />
+              <ProductCard title="Product 2" price={18.99} />
+              <ProductCard title="Product 3" price={34.99} />
             </div>
             <div className="flex justify-center">
-              <Button className="bg-primary hover:bg-primary/90 text-text-white">View All Products</Button>
+              <Link href="/shop">
+                <Button className="bg-primary hover:bg-primary/90 text-text-white">View All Products</Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -85,9 +89,6 @@ export default function Home() {
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   And if you are here just to have a look around, feel free to look at my own work. I use a filament 3D printer, CAD software and even physical materials like wood and acrylic.
                 </p>
-                <Button variant="outline" className="border-primary text-primary">
-                  Learn More About Us
-                </Button>
               </div>
             </div>
           </div>
