@@ -23,9 +23,7 @@ const Command = React.forwardRef<
 ))
 Command.displayName = CommandPrimitive.displayName
 
-interface CommandDialogProps extends Omit<DialogProps, 'children'> {
-  children: React.ReactElement | React.ReactElement[]
-}
+type CommandDialogProps = DialogProps
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (

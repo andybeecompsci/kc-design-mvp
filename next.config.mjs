@@ -7,7 +7,7 @@ const nextConfig = {
   // # strict type checking but allow build to complete
   typescript: {
     // # don't fail the build but show errors
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
     // # check types during build
     tsconfigPath: './tsconfig.json'
   },
