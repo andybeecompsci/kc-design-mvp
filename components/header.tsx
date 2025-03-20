@@ -17,49 +17,50 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b bg-white">
-        <div className="flex items-center justify-between py-4 w-full px-8">
-          <nav className="flex items-center gap-8">
+        <div className="container flex items-center justify-between py-4 relative">
+          {/* Left: Navigation */}
+          <nav className="flex items-center gap-4 md:gap-8">
             <Link 
               href="/" 
-              className={`text-lg font-bold transition-colors hover:text-primary ${pathname === "/" ? "text-primary" : ""}`}
+              className={`text-sm md:text-lg font-bold transition-colors hover:text-primary ${pathname === "/" ? "text-primary" : ""}`}
             >
               HOME
             </Link>
             <Link 
               href="/shop" 
-              className={`text-lg font-bold transition-colors hover:text-primary ${pathname === "/shop" ? "text-primary" : ""}`}
+              className={`text-sm md:text-lg font-bold transition-colors hover:text-primary ${pathname === "/shop" ? "text-primary" : ""}`}
             >
               SHOP
             </Link>
             <Link 
               href="/contact" 
-              className={`text-lg font-bold transition-colors hover:text-primary ${pathname === "/contact" ? "text-primary" : ""}`}
+              className={`text-sm md:text-lg font-bold transition-colors hover:text-primary ${pathname === "/contact" ? "text-primary" : ""}`}
             >
               CONTACT
             </Link>
           </nav>
-          
+
+          {/* Center: Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/images/kc-logo.png"
                 alt="KC Design Co Logo"
-                width={48}
-                height={48}
-                className="h-12 w-auto"
+                width={40}
+                height={40}
+                className="h-8 w-auto md:h-12"
               />
-              <h1 className="text-xl font-bold">KC DESIGN CO</h1>
+              <h1 className="text-lg md:text-xl font-bold whitespace-nowrap">KC DESIGN CO</h1>
             </Link>
           </div>
 
-          <div className="flex items-center">
-            <button 
-              onClick={() => setIsCartOpen(true)} 
-              className="p-2 hover:text-primary"
-            >
-              <ShoppingBag className="h-6 w-6" />
-            </button>
-          </div>
+          {/* Right: Cart */}
+          <button 
+            onClick={() => setIsCartOpen(true)} 
+            className="p-2 hover:text-primary"
+          >
+            <ShoppingBag className="h-5 w-5 md:h-6 md:w-6" />
+          </button>
         </div>
       </header>
 
