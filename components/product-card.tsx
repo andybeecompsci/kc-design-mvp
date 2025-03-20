@@ -1,38 +1,34 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShoppingBag } from "lucide-react"
+import Image from "next/image"
 
 interface ProductCardProps {
   title: string
   price: number
-  image: string
 }
 
-export default function ProductCard({ title, price, image }: ProductCardProps) {
+export default function ProductCard({ title, price }: ProductCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-lg border">
-      <Link href="#" className="absolute inset-0 z-10">
-        <span className="sr-only">View {title}</span>
-      </Link>
-      <div className="aspect-square overflow-hidden">
-        <img
-          src={image || "/placeholder.svg"}
+    <div className="group relative rounded-lg border p-4 hover:border-primary transition-colors">
+      <div className="aspect-square overflow-hidden rounded-lg bg-gray-100 mb-4">
+        <Image
+          src="/images/placeholder.png"
           alt={title}
           width={300}
           height={300}
-          className="object-cover transition-transform group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform group-hover:scale-105"
         />
       </div>
-      <div className="p-4">
+      
+      <div className="space-y-2">
         <h3 className="font-medium">{title}</h3>
-        <p className="text-sm text-gray-500">${price.toFixed(2)}</p>
-        <div className="mt-4 flex items-center justify-between">
-          <Button variant="outline" size="sm" className="z-20 relative border-[#6b705c] text-[#6b705c]">
-            <ShoppingBag className="mr-2 h-4 w-4" />
-            Add to Cart
-          </Button>
-        </div>
+        <p className="text-primary font-semibold">${price.toFixed(2)}</p>
       </div>
+      
+      <Button 
+        className="w-full mt-4 bg-primary hover:bg-primary/90 text-text-white"
+      >
+        Add to Cart
+      </Button>
     </div>
   )
 }

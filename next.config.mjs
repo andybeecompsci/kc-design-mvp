@@ -13,8 +13,16 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  output: 'standalone',
   images: {
-    unoptimized: true,
+    domains: ['localhost'],
+    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,

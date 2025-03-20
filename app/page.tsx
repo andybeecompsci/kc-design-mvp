@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ShoppingBag } from "lucide-react"
 import ProductCard from "@/components/product-card"
@@ -26,13 +27,14 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover">
-                <img
+              <div className="mx-auto aspect-video overflow-hidden rounded-xl">
+                <Image
                   alt="3D Printing Service"
-                  className="aspect-[4/3] object-cover w-full"
+                  className="aspect-[4/3] object-cover"
                   height={400}
-                  src="/placeholder.svg?height=400&width=600"
                   width={600}
+                  src="/images/placeholder.png"
+                  priority
                 />
               </div>
             </div>
@@ -50,9 +52,9 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <ProductCard title="Custom T-Shirt" price={24.99} image="/placeholder.svg?height=300&width=300" />
-              <ProductCard title="Handmade Mug" price={18.99} image="/placeholder.svg?height=300&width=300" />
-              <ProductCard title="Personalized Sign" price={34.99} image="/placeholder.svg?height=300&width=300" />
+              <ProductCard title="Custom T-Shirt" price={24.99} />
+              <ProductCard title="Handmade Mug" price={18.99} />
+              <ProductCard title="Personalized Sign" price={34.99} />
             </div>
             <div className="flex justify-center">
               <Button className="bg-primary hover:bg-primary/90 text-text-white">View All Products</Button>
@@ -64,12 +66,12 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover lg:order-last">
-                <img
+                <Image
                   alt="About Image"
-                  className="aspect-[4/3] object-cover w-full"
+                  className="aspect-[4/3] object-cover"
                   height={400}
-                  src="/placeholder.svg?height=400&width=600"
                   width={600}
+                  src="/images/placeholder.png"
                 />
               </div>
               <div className="space-y-4">

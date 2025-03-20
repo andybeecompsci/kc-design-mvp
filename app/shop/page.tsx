@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ShoppingBag } from "lucide-react"
 import ProductCard from "@/components/product-card"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
@@ -11,42 +10,36 @@ const products = [
     id: 1,
     title: "Custom T-Shirt",
     price: 24.99,
-    image: "/placeholder.svg?height=300&width=300",
     category: "Apparel"
   },
   {
     id: 2,
     title: "Handmade Mug",
     price: 18.99,
-    image: "/placeholder.svg?height=300&width=300",
     category: "Home Decor"
   },
   {
     id: 3,
     title: "Personalized Sign",
     price: 34.99,
-    image: "/placeholder.svg?height=300&width=300",
     category: "Home Decor"
   },
   {
     id: 4,
     title: "Custom Hoodie",
     price: 39.99,
-    image: "/placeholder.svg?height=300&width=300",
     category: "Apparel"
   },
   {
     id: 5,
     title: "Decorative Pillow",
     price: 29.99,
-    image: "/placeholder.svg?height=300&width=300",
     category: "Home Decor"
   },
   {
     id: 6,
     title: "Custom Phone Case",
     price: 19.99,
-    image: "/placeholder.svg?height=300&width=300",
     category: "Accessories"
   }
 ]
@@ -96,7 +89,6 @@ export default function ShopPage() {
                   key={product.id}
                   title={product.title}
                   price={product.price}
-                  image={product.image}
                 />
               ))}
             </div>
@@ -110,7 +102,6 @@ export default function ShopPage() {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   )

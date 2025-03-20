@@ -42,7 +42,7 @@ export default function Header() {
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/kc-logo.png"
+                src="/images/kc-logo.png"
                 alt="KC Design Co Logo"
                 width={48}
                 height={48}
