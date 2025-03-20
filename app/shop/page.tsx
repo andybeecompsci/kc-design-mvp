@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ShoppingBag } from "lucide-react"
 import ProductCard from "@/components/product-card"
 import Footer from "@/components/footer"
+import Header from "@/components/header"
 
 // # mock data for products - in a real app this would come from an API or database
 const products = [
@@ -56,34 +57,7 @@ const categories = ["All", "Apparel", "Home Decor", "Accessories"]
 export default function ShopPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* # header section */}
-      <header className="sticky top-0 z-40 border-b bg-white">
-        <div className="container flex flex-col items-center py-6">
-          <Link href="/" className="mb-4 flex items-center gap-1">
-            <img
-              src="/kc-logo.png"
-              alt="KC Design Co Logo"
-              className="h-8 w-auto"
-            />
-            <h1 className="text-xl font-bold">DESIGN CO</h1>
-          </Link>
-          <nav className="flex items-center gap-16">
-            <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
-              Home
-            </Link>
-            <Link href="/shop" className="text-sm font-medium text-primary">
-              Shop
-            </Link>
-            <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
-              About
-            </Link>
-            <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
-
+      <Header />
       <main className="flex-1">
         {/* # shop hero section */}
         <section className="w-full py-12 md:py-16 bg-background-alt">
