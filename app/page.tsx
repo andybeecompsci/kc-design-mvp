@@ -9,7 +9,12 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 border-b bg-white">
         <div className="container flex h-16 items-center justify-between py-4">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2">
+            <img
+              src="/kc-logo.png"
+              alt="KC Design Co Logo"
+              className="h-8 w-auto"
+            />
             <h1 className="text-xl font-bold tracking-tight">KC DESIGN CO</h1>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
@@ -35,7 +40,7 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f8f5f2]">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-background-alt">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
@@ -45,8 +50,8 @@ export default function Home() {
                   for yourself or as a gift.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-[#6b705c] hover:bg-[#5a5f4d] text-white">Shop Now</Button>
-                  <Button variant="outline" className="border-[#6b705c] text-[#6b705c]">
+                  <Button className="bg-primary hover:bg-primary/90 text-text-white">Shop Now</Button>
+                  <Button variant="outline" className="border-primary text-primary">
                     Learn More
                   </Button>
                 </div>
@@ -79,11 +84,11 @@ export default function Home() {
               <ProductCard title="Personalized Sign" price={34.99} image="/placeholder.svg?height=300&width=300" />
             </div>
             <div className="flex justify-center">
-              <Button className="bg-[#6b705c] hover:bg-[#5a5f4d] text-white">View All Products</Button>
+              <Button className="bg-primary hover:bg-primary/90 text-text-white">View All Products</Button>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f8f5f2]">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-background-alt">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover lg:order-last">
@@ -102,7 +107,7 @@ export default function Home() {
                   people's lives. Each piece is made with care and attention to detail, ensuring that you receive a
                   product that is not only beautiful but also durable.
                 </p>
-                <Button variant="outline" className="border-[#6b705c] text-[#6b705c]">
+                <Button variant="outline" className="border-primary text-primary">
                   Learn More About Us
                 </Button>
               </div>
@@ -159,7 +164,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#6b705c] text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -175,7 +180,7 @@ export default function Home() {
                     placeholder="Email address"
                     type="email"
                   />
-                  <Button type="submit" className="bg-white text-[#6b705c] hover:bg-gray-100">
+                  <Button type="submit" className="bg-text-white text-primary hover:bg-gray-100">
                     Subscribe
                   </Button>
                 </form>
