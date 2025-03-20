@@ -14,21 +14,21 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Handcrafted Designs</h2>
+                <p className="text-text-primary">Have an idea but don't know how to bring it to life...</p>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">CUSTOM DESIGN & 3D PRINTING SERVICE</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Unique, handmade items created with love. From custom apparel to home decor, find something special
-                  for yourself or as a gift.
+                  If you have an idea or want something specific and you are not quite sure how to come about it or can't find something that works, you have come to the right place!
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-primary hover:bg-primary/90 text-text-white">Shop Now</Button>
+                  <Button className="bg-primary hover:bg-primary/90 text-text-white">Get Started</Button>
                   <Button variant="outline" className="border-primary text-primary">
-                    Learn More
+                    View Our Work
                   </Button>
                 </div>
               </div>
               <div className="mx-auto aspect-video overflow-hidden rounded-xl object-cover">
                 <img
-                  alt="Hero Image"
+                  alt="3D Printing Service"
                   className="aspect-[4/3] object-cover w-full"
                   height={400}
                   src="/placeholder.svg?height=400&width=600"
@@ -38,13 +38,14 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Products</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">UTILISE YOUR MIND AND YOUR CREATIVITY</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Discover our most popular handcrafted items
+                  Reach out to us and let us know if there is anything we can do for you.
                 </p>
               </div>
             </div>
@@ -58,6 +59,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-background-alt">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
@@ -71,11 +73,15 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About KC Design Co</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About KC Design Co & Mon The Owner</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  KC Design Co was founded with a passion for creating unique, handcrafted items that bring joy to
-                  people's lives. Each piece is made with care and attention to detail, ensuring that you receive a
-                  product that is not only beautiful but also durable.
+                  Hi, I'm Mon or KC (Artist name). I love to design, build and create. I love to take an idea and bring it to life. I'm fortunate enough to have a creative mind and I wanted to encourage others to utilise their own.
+                </p>
+                <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Let me try and help bring your ideas to life with the help of another pair of eyes and well brains too I guess.
+                </p>
+                <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  And if you are here just to have a look around, feel free to look at my own work. I use a filament 3D printer, CAD software and even physical materials like wood and acrylic.
                 </p>
                 <Button variant="outline" className="border-primary text-primary">
                   Learn More About Us
