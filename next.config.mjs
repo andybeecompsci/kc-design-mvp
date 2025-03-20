@@ -7,28 +7,22 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // # temporarily ignore build errors to get deployment working
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
-  output: 'standalone',
+  // # image optimization settings
   images: {
-    domains: ['localhost'],
-    unoptimized: false,
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
-  experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
-  },
+        hostname: '**'
+      }
+    ]
+  }
 }
 
 mergeConfig(nextConfig, userConfig)
